@@ -11,24 +11,24 @@
 </head>
 
 <body>
-    <div class="contact-container">
+        <div class="contact-container">
         <div class="right">
             <h1 class="title">Sign Into Account</h1>
-            <img class="logo" src="../assests/images/logo.png" alt="">
+            <img class="logo" src="logo.png" alt="">
             <div class="form-container">
                 <div class="username">
                     <i class="fa-solid fa-envelope icon"></i>
-                    <input type="email" class="user-input" placeholder="E-Mail">
+                    <input type="email" class="user-input" id="email" placeholder="E-Mail">
                 </div>
                 <div class="password">
                     <i class="fa-solid fa-lock icon"></i>
-                    <input type="password" class="pass-input" placeholder="Password">
+                    <input type="password" class="pass-input" id="password" placeholder="Password">
                 </div>
                 <div class="keepme">
-                    <input type="checkbox" checked="true">
+                    <input type="checkbox" id="keepLoggedIn" checked="true">
                     Keep Me Logged In
                 </div>
-                <button type="submit">Go !</button>
+                <button type="submit" id="loginButton">Go !</button>
                 <a href="#" class="link">Forgot Password</a>
             </div>
         </div>

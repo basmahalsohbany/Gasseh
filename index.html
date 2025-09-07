@@ -30,6 +30,10 @@
   <link href="assests/css/style.css" rel="stylesheet">
   <link href="assests/css/all.min.css" rel="stylesheet">
 
+ <!--  toast notification File -->
+  <!-- CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
 
   <!-- =======================================================
   * Template Name: Gassah
@@ -55,22 +59,7 @@
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
 
-          <li ><a href="html/about.html"><span>About</span> </a>
-            <!-- <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-            </ul> -->
-          </li>
+          <li ><a href="html/about.html"><span>About</span> </a> </li>
 
           <li><a href="html/service.html">Services</a></li>
           <li><a href="#Blog">Blog</a></li>
@@ -213,38 +202,165 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-janbiah">
             <img src="assests/images/Janbiah-3.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Janbiah</h4>
-              <p>Yemen</p>
-              <a href="assests/images/Janbiah-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Janbiah</h4>
+                  <p>$300</p> 
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Janbiah')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Janbiah')"></i></p>
+                </div>
             </div>
-          </div>
+              
+              
+               <!-- أيقونة المكبر تفتح المودال -->
+              <a href="javascript:void(0)" class="preview-link" title="show prodect" data-bs-toggle="modal" data-bs-target="#productModal">
+                <i class="bx bx-plus"></i>
+              </a>
+
+                <!-- رابط التفاصيل -->
+                <a href="#" class="details-link" title="More Details">
+                  <i class="bx bx-link"></i>
+                </a>
+               </div>
+                  </div>
+                      <!-- Modal المنتج -->
+                    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel">Janbiah</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                          </div>
+                          <div class="modal-body text-center">
+                            <img src="assests/images/Janbiah-3.jpg" class="img-fluid mb-3" style="max-height:200px;">
+                            <h4>Janbiah</h4>
+                            <p>Price : $300</p>
+                            <p>Discription your Product.</p>
+                            <button class="btn btn-success" onclick="buyProduct()">🛒 BUY </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+      
+
+          <!-- **** -->
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-copperplates">
             <img src="assests/images/Copperplates-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Copperplates</h4>
-              <p>yemen</p>
-              <a href="assests/images/Copperplates-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+               <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Copperplates</h4>
+                  <p>200$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Copperplates')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Copperplates')"></i></p>
+                </div>
             </div>
-          </div>
+
+
+             <!-- أيقونة المكبر تفتح المودال -->
+              <a href="javascript:void(0)" class="preview-link" title="show prodect" data-bs-toggle="modal" data-bs-target="#productModalCopperplates">
+                <i class="bx bx-plus"></i>
+              </a>
+
+                <!-- رابط التفاصيل -->
+                <a href="#" class="details-link" title="More Details">
+                  <i class="bx bx-link"></i>
+                </a>
+               </div>
+                  </div>
+                      <!-- Modal المنتج -->
+                    <div class="modal fade" id="productModalCopperplates" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel">Copperplates</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                          </div>
+                          <div class="modal-body text-center">
+                            <img src="assests/images/Copperplates-1.jpg" class="img-fluid mb-3" style="max-height:200px;">
+                            <h4>Copperplates</h4>
+                            <p>Price : 200$</p>
+                            <p>Discription your Product.</p>
+                            <button class="btn btn-success" onclick="buyProduct()">🛒 BUY </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+            
+
+
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-minerals">
             <img src="assests/images/Minerals-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Minerals</h4>
-              <p>Yemen</p>
-              <a href="assests/images/Minerals-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Minerals</h4>
+                  <p>250$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Minerals')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Minerals')"></i></p>
+                </div>
             </div>
-          </div>
+              
+             <!-- أيقونة المكبر تفتح المودال -->
+              <a href="javascript:void(0)" class="preview-link" title="show prodect" data-bs-toggle="modal" data-bs-target="#productModalMinerals">
+                <i class="bx bx-plus"></i>
+              </a>
+
+                <!-- رابط التفاصيل -->
+                <a href="#" class="details-link" title="More Details">
+                  <i class="bx bx-link"></i>
+                </a>
+               </div>
+                  </div>
+                      <!-- Modal المنتج -->
+                    <div class="modal fade" id="productModalMinerals" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel">Minerals</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                          </div>
+                          <div class="modal-body text-center">
+                            <img src="assests/images/Minerals-1.jpg" class="img-fluid mb-3" style="max-height:200px;">
+                            <h4>Mineralss</h4>
+                            <p>Price : 220$</p>
+                            <p>Discription your Product.</p>
+                            <button class="btn btn-success" onclick="buyProduct()">🛒 BUY </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+
+          
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-ceramics">
             <img src="assests/images/Ceramics-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Ceramics</h4>
-              <p>yemen</p>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Ceramics</h4>
+                  <p>250$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Ceramics')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Ceramics')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Ceramics-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -253,8 +369,18 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-janbiah">
             <img src="assests/images/Janbiah-2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Janbiah</h4>
-              <p>Yemen</p>
+            
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Janbiah</h4>
+                  <p>200$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Janbiah')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Janbiah')"></i></p>
+                </div>
+            </div>
+
               <a href="assests/images/Janbiah-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -263,8 +389,16 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-minerals">
             <img src="assests/images/Minerals-2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Minerals</h4>
-              <p>Yemen</p>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Minerals</h4>
+                  <p>320$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Minerals')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Minerals')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Minerals-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -273,8 +407,16 @@
          <div class="col-lg-4 col-md-6 portfolio-item filter-copperplates">
             <img src="assests/images/Copperplates-2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Copperplates</h4>
-              <p>yemen</p>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Copperplates</h4>
+                  <p>350$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Copperplates')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Copperplates')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Copperplates-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -283,8 +425,17 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-ceramics">
             <img src="assests/images/Ceramics-2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Ceramics</h4>
-              <p>yemen</p>
+              
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Ceramics</h4>
+                  <p>250$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Ceramics')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Ceramics')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Ceramics-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -293,8 +444,16 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-minerals">
             <img src="assests/images/Minerals-3.png" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Minerals</h4>
-              <p>Yemen</p>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Minerals</h4>
+                  <p>50$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Minerals')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Minerals')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Minerals-3.png" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -304,8 +463,16 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-janbiah">
             <img src="assests/images/Janbiah-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Janbiah</h4>
-              <p>Yemen</p>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Janbiah</h4>
+                  <p>150$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Janbiah')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Janbiah')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Janbiah-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -314,8 +481,16 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-ceramics">
             <img src="assests/images/Ceramics-3.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Ceramics</h4>
-              <p>yemen</p>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Ceramics</h4>
+                  <p>90$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Ceramics')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Ceramics')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Ceramics-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -324,8 +499,17 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-minerals">
             <img src="assests/images/Minerals-4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Minerals</h4>
-              <p>Yemen</p>
+
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Minerals</h4>
+                  <p>100$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Minerals')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Minerals')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Minerals-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -334,8 +518,16 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-copperplates">
             <img src="assests/images/Copperplates-3.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Copperplates</h4>
-              <p>yemen</p>
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Copperplates</h4>
+                  <p>250$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Copperplates')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Copperplates')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Copperplates-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -344,8 +536,17 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-janbiah">
             <img src="assests/images/Janbiah-4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Janbiah</h4>
-              <p>Yemen</p>
+              
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Janbiah</h4>
+                  <p>300$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Janbiah')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Janbiah')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Janbiah-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -354,8 +555,17 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-minerals">
             <img src="assests/images/Minerals-5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Minerals</h4>
-              <p>Yemen</p>
+              
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Minerals</h4>
+                  <p>550$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Minerals')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Minerals')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Minerals-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -364,8 +574,17 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-ceramics">
             <img src="assests/images/Ceramics-4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Ceramics</h4>
-              <p>yemen</p>
+              
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Ceramics</h4>
+                  <p>250$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Ceramics')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Ceramics')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Ceramics-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -374,8 +593,17 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-copperplates">
             <img src="assests/images/Copperplates-4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Copperplates</h4>
-              <p>yemen</p>
+              
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Copperplates</h4>
+                  <p>350$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Copperplates')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Copperplates')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Copperplates-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -384,8 +612,17 @@
            <div class="col-lg-4 col-md-6 portfolio-item filter-ceramics">
             <img src="assests/images/Ceramics-5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Ceramics</h4>
-              <p>yemen</p>
+              
+              <div class="portfolio-des">
+                <div class="portfolio-text">
+                  <h4>Ceramics</h4>
+                  <p>190$</p>
+               </div>
+               <div class="portfolio-price">
+                  <p><i class="fa-solid fa-cart-shopping" onclick="buyProduct('Ceramics')"></i></p>
+                  <p><i class="fa-solid fa-heart" onclick="likeProduct('Ceramics')"></i></p>
+                </div>
+            </div>
               <a href="assests/images/Ceramics-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
               <a href="#" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -459,6 +696,7 @@
   </main>
   <!-- End #main -->
 
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -523,9 +761,19 @@
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
+
+  
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- استدعاء Bootstrap و Toastify -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <!-- Vendor JS Files -->
   <script src="assests/vendor/aos/aos.js"></script>
@@ -539,6 +787,9 @@
   <!-- Template Main JS File -->
   <script src="assests/js/script.js"></script>
 
+  
+
+ 
 </body>
 
 </html>

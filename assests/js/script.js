@@ -172,3 +172,52 @@
   });
 
 })()
+
+
+
+
+//  toast notification
+ // دالة Toast عامة
+  function showToast(type, message) {
+    const colors = {
+      success: "linear-gradient(to right, #00b09b, #96c93d)", // أخضر
+      info: "linear-gradient(to right, #2193b0, #6dd5ed)",    // أزرق
+    };
+
+    Toastify({
+      text: message,
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      backgroundColor: colors[type] || "#333",
+      stopOnFocus: true,
+    }).showToast();
+  }
+
+  // دالة شراء المنتج
+  function buyProduct(productName) {
+    showToast('success', `✅ تم شراء ${productName} بنجاح`);
+  }
+
+  // دالة الإعجاب بالمنتج
+  function likeProduct(productName) {
+    showToast('info', `❤️ تم الإعجاب بـ ${productName}`);
+  }
+
+
+    function buyProduct() {
+    Toastify({
+      text: "✅ تم شراء المنتج بنجاح",
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      close: true
+    }).showToast();
+  }
+
+
+  
+
+
